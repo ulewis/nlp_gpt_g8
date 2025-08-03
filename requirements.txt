@@ -1,14 +1,18 @@
-streamlit
-langchain>=0.1.17
-langchain-openai>=0.1.6
-langchain-chroma>=0.1.0
-langchain-community>=0.0.30
-openai>=1.30.1
-tiktoken
-pydantic<2
-numpy
-scikit-learn
-pandas
-plotly
-chromadb>=0.4.24
-pysqlite3-binary    
+# Core app & UI
+streamlit==1.47.1           # UI principal :contentReference[oaicite:0]{index=0}
+plotly==6.2.0               # Gráficos 3D opcionales :contentReference[oaicite:1]{index=1}
+
+# Ciencia de datos
+numpy==2.3.2                # Cálculo numérico :contentReference[oaicite:2]{index=2}
+pandas==2.3.1               # Tablas y dataframe :contentReference[oaicite:3]{index=3}
+scikit-learn==1.7.1         # PCA y similitud coseno :contentReference[oaicite:4]{index=4}
+
+# LangChain + OpenAI + vectores
+openai>=1.25.0              # Cliente oficial (sin fijar a parche)
+langchain==0.3.27           # Núcleo LangChain :contentReference[oaicite:5]{index=5}
+langchain-openai==0.3.28    # Integración OpenAI :contentReference[oaicite:6]{index=6}
+langchain-chroma==0.2.5     # Vectorstore Chroma :contentReference[oaicite:7]{index=7}
+chromadb>=0.5.0             # Motor de almacenamiento (dep. de arriba)
+
+# Compatibilidad sqlite en despliegues (opcional pero útil)
+pysqlite3-binary==0.5.4     # SQLite embebido en entornos sin lib nativa :contentReference[oaicite:8]{index=8}
