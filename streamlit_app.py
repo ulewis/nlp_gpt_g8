@@ -336,3 +336,4 @@ if __name__ == "__main__":
     assert extraer_codigo_desde_texto("2025-UNPRG") == "2025-UNPRG"
     assert extraer_codigo_desde_texto("UNPRG-2025") == "UNPRG-2025"
     print("✔️ Tests locales de extracción de códigos superados.")
+
